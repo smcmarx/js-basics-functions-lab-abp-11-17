@@ -6,6 +6,15 @@ function distanceFromHqInBlocks (blockNumber) {
     return 42 - blockNumber
   }
 }
+
 function distanceFromHqInFeet(blockNumber) {
   return distanceFromHqInBlocks(blockNumber)*264
+}
+
+function distanceTravelledInFeet(start, destination) {
+  if(start < destination) {
+    return (destination - start) * 264
+  } else {
+    return (start - destination) * 264
+  }
 }
